@@ -41,7 +41,7 @@ function SearchHistory({
   if (history.length === 0 || isOpen) return null;
   return (
     <>
-      (
+     
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -77,7 +77,7 @@ function SearchHistory({
           Clear
         </button>
       </motion.div>
-      )
+      
     </>
   );
 }
