@@ -38,7 +38,7 @@ function SearchHistory({
     setStoredHistory(history);
   }, [history, setStoredHistory]);
 
-  if (history.length === 0 || isOpen) return null;
+  if (history.length === 0 || !isOpen) return null;
   return (
     <>
      
