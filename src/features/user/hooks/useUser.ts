@@ -10,7 +10,7 @@ function useUser() {
     enabled: !!username,
     staleTime: 60 * 1000 * 2,
     gcTime: 60 * 1000 * 10,
-    retry: false,
+    retry: 1,
   });
 
   const reposCount = data?.public_repos;

@@ -16,7 +16,7 @@ function useInfiniteRepos(perPage = 6) {
     enabled: !!username,
     staleTime: 20 * 1000,
     gcTime: 60 * 1000 * 10,
-    retry: false,
+    retry: 1,
   });
 
   return {
