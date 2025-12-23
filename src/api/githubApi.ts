@@ -1,11 +1,7 @@
 import type { GithubRepo } from "@/shared/types/github";
 
 export async function getUser(username: string | undefined) {
-  const res = await fetch(`https://api.github.com/users/${username}`, {
-    headers: {
-      Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`,
-    },
-  });
+  const res = await fetch(`https://api.github.com/users/${username}`);
 
   if (!res.ok) {
     if (res.status === 404) {
@@ -25,11 +21,6 @@ export async function getReposPaginated(
 ) {
   const res = await fetch(
     `https://api.github.com/users/${username}/repos?page=${page}&per_page=${per_page}`,
-    {
-      headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`,
-      },
-    },
   );
   if (!res.ok) {
     if (res.status === 404) {
@@ -48,11 +39,6 @@ export async function getAllRepos(username: string) {
   while (true) {
     const res = await fetch(
       `https://api.github.com/users/${username}/repos?page=${page}&per_page=${per_page}`,
-      {
-        headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`,
-        },
-      },
     );
 
     if (!res.ok) {
