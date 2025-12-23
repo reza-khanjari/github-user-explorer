@@ -100,7 +100,6 @@ Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
   <img src="screenshots/home-page-desktop.png" width="50%">
   <img src="screenshots/user-page-desktop.png" width="50%">
   <img src="screenshots/charts-desktop.png" width="50%">
-  <img src="screenshots/home-page-mobile.png" width="50%">
   <img src="screenshots/user-page-mobile.png" width="50%">
   <img src="screenshots/chart-mobile.png" width="50%">
 </p>
