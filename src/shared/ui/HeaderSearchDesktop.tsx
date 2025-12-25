@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import {  useRef, useState } from "react";
 import SearchHistory from "./SearchHistory";
 import SearchInput from "./SearchInput";
 import useClickOutSide from "../hooks/useClickOutSide";

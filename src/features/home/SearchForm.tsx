@@ -6,7 +6,6 @@ import useClickOutSide from "@hooks/useClickOutSide";
 import { FaSearch } from "react-icons/fa";
 
 function SearchForm() {
-
   const [isOpen, setIsOpen] = useState(false);
   const { submitUsername } = useUserSearch();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -14,7 +13,9 @@ function SearchForm() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const rawValue = inputRef.current?.value ?? "";
-    submitUsername(rawValue, setIsOpen);
+    const success = submitUsername(rawValue);
+    if (success) return;
+    setIsOpen(false);
     inputRef.current!.value = "";
   }
 

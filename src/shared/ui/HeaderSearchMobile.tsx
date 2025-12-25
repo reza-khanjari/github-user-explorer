@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import SearchInput from "./SearchInput";
 import { FaSearch } from "react-icons/fa";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import SearchHistory from "./SearchHistory";
 import useHeaderSearch from "./useHeaderSearch";
 
