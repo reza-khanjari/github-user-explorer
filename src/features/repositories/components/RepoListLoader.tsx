@@ -5,7 +5,7 @@ const skeletonLoader = [...Array(6)].map((_, i) => {
 });
 function RepoListLoader() {
   return (
-    <div className="mx-auto my-8 grid min-h-350 w-full min-w-250 grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
+    <div className="mx-auto my-8 grid min-h-350 w-full  grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
       {skeletonLoader}
     </div>
   );

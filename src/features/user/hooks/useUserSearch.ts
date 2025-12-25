@@ -3,14 +3,14 @@ import validateUsername from "@utils/validateUsername";
 import toast from "react-hot-toast";
 import { useAppDispatch } from "@store/hooks";
 import { addSearch } from "@store/searchHistory/searchHistory.slice";
-import type React from "react";
+
 
 function useUserSearch() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   function submitUsername(
     rawValue: string,
-    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>,
+  
   ) {
     const username = rawValue.trim().toLowerCase();
     const usernameValidation = validateUsername(username);
@@ -20,7 +20,7 @@ function useUserSearch() {
     }
     dispatch(addSearch(username));
     navigate(`/user/${username}`);
-    setIsOpen(false);
+    return true
   }
 
   return { submitUsername };

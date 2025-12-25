@@ -13,10 +13,10 @@ import useLocalStorage from "@hooks/useLocalStorage";
 import { useEffect, useRef } from "react";
 
 function SearchHistory({
-  isOpen,
+  isOpen = true,
   onSelect,
 }: {
-  isOpen: boolean;
+  isOpen?: boolean;
   onSelect: () => void;
 }) {
   const [storedHistory, setStoredHistory] = useLocalStorage<HistoryRecord[]>(
