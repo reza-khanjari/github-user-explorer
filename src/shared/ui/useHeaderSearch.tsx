@@ -9,7 +9,6 @@ function useHeaderSearch(onSuccess?: () => void) {
     const rawValue = inputRef.current?.value ?? "";
     const success = submitUsername(rawValue);
     if (!success) return;
-    if (inputRef.current) inputRef.current.value = "";
     onSuccess?.();
   }
   return { handleSubmit, inputRef };

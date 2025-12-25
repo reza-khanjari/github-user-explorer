@@ -11,6 +11,7 @@ import {
 import { FaTrash } from "react-icons/fa";
 import useLocalStorage from "@hooks/useLocalStorage";
 import { useEffect, useRef } from "react";
+import toast from "react-hot-toast";
 
 function SearchHistory({
   isOpen = true,
@@ -41,7 +42,6 @@ function SearchHistory({
   if (history.length === 0 || !isOpen) return null;
   return (
     <>
-     
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -57,14 +57,22 @@ function SearchHistory({
               <button
                 type="button"
                 className="w-full cursor-pointer text-sm text-black/75"
-                onClick={() => {
+                onMouseDown={(e) => {
+                  e.preventDefault();
                   navigate(`/user/${item.username}`);
                   onSelect();
                 }}
               >
                 {item.username}
               </button>
-              <FaTrash onClick={() => dispatch(removeItem(item.id))} />
+              <FaTrash
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  dispatch(removeItem(item.id));
+                  toast.success("Removed from search history");
+                }}
+              />
             </li>
           ))}
         </ul>
@@ -72,12 +80,15 @@ function SearchHistory({
         <button
           className="mt-2 w-full cursor-pointer text-center hover:text-white/80"
           type="button"
-          onClick={() => dispatch(clearHistory())}
+          onMouseDown={(e) => {
+            e.preventDefault();
+            dispatch(clearHistory());
+            toast.success("Search history cleared");
+          }}
         >
           Clear
         </button>
       </motion.div>
-      
     </>
   );
 }

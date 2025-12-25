@@ -1,19 +1,39 @@
-import {  useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import SearchHistory from "./SearchHistory";
 import SearchInput from "./SearchInput";
-import useClickOutSide from "../hooks/useClickOutSide";
 import useHeaderSearch from "./useHeaderSearch";
 
 function HeaderSearchDesktop() {
+  const [query, setQuery] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
-  const { handleSubmit, inputRef } = useHeaderSearch(()=> setIsHistoryOpen(false));
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  useClickOutSide(wrapperRef, () => setIsHistoryOpen(false));
-  
+  const { handleSubmit, inputRef } = useHeaderSearch(() => {
+    (setIsHistoryOpen(false), setQuery(""));
+  });
+
+
+  useEffect(() => {
+    if (query.trim().length === 0 && isFocused) {
+      setIsHistoryOpen(true);
+    } else {
+      setIsHistoryOpen(false);
+    }
+  }, [query,isFocused]);
+
   return (
     <form onSubmit={handleSubmit}>
-      <div ref={wrapperRef} className="relative hidden w-full md:block">
-        <SearchInput onFocus={() => setIsHistoryOpen(true)} ref={inputRef} />
+      <div className="relative hidden w-full md:block">
+        <SearchInput
+          value={query}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setQuery(e.target.value)
+          }
+          onFocus={() => {
+            setIsFocused(true);
+          }}
+          onBlur={() => setIsFocused(false)}
+          ref={inputRef}
+        />
         <SearchHistory
           onSelect={() => setIsHistoryOpen(false)}
           isOpen={isHistoryOpen}
