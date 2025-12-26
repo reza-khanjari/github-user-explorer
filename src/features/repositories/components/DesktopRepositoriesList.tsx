@@ -12,7 +12,6 @@ function DesktopRepositoriesList() {
   const [params] = useSearchParams();
   const page = Number(params.get("page")) || 1;
   const perPage = 6;
-
   const { reposCount } = useUser();
   const totalPages = Math.ceil((reposCount ?? 0) / perPage);
 

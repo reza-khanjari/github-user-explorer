@@ -8,7 +8,7 @@ function HeaderSearchDesktop() {
   const [isFocused, setIsFocused] = useState(false);
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
   const { handleSubmit, inputRef } = useHeaderSearch(() => {
-    (setIsHistoryOpen(false), setQuery(""));
+    (setIsHistoryOpen(false), setQuery(""),inputRef.current?.blur());
   });
 
 

@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import HeaderSearch from "./HeaderSearch";
 
 function Header() {
+
+
   return (
     <header className="fixed top-0 z-10 w-full md:static">
       <nav>
