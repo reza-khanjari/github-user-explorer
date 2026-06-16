@@ -96,10 +96,46 @@ VITE_GITHUB_TOKEN=your_github_token
 Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
 ```
 
+## 📸 Preview
+
+### Desktop view
+
 <p align="center">
-  <img src="screenshots/home-page-desktop.png" width="50%">
-  <img src="screenshots/user-page-desktop.png" width="50%">
-  <img src="screenshots/charts-desktop.png" width="50%">
-  <img src="screenshots/user-page-mobile.png" width="50%">
-  <img src="screenshots/chart-mobile.png" width="50%">
+  <img src="./public/screenshots/Macbook-Pro-16-1728x1862.png" alt="Desktop Screenshot 1" width="800" style="max-width: 100%; margin: 10px 0;">
+    <br>
+    <br>
+  <img src="./public/screenshots/Macbook-Pro-16-1728x1117(1).png" alt="Desktop Screenshot 2" width="800" style="max-width: 100%; margin: 10px 0;">
+    <br>
+    <br>
+  <img src="./public/screenshots/Macbook-Pro-16-1728x1117(2).png" alt="Desktop Screenshot 3" width="800" style="max-width: 100%; margin: 10px 0;">
+    <br>
+    <br>
+  <img src="./public/screenshots/Macbook-Pro-16-1728x1862.png" alt="Desktop Screenshot " width="800" style="max-width: 100%; margin: 10px 0;">
+    <br>
+    <br>
+  <img src="./public/screenshots/Full-HD-1920x1878.png" alt="Desktop Screenshot " width="800" style="max-width: 100%; margin: 10px 0;">
 </p>
+
+### Mobile view
+
+<p align="center">
+  <img src="./public/screenshots/iPhone-13-Pro-Max-428x926.png" alt="iPhone Screenshot" width="400" style="max-width: 45%; margin:20px  20px 20px 0;">
+    <br>
+    <br>
+  <img src="./public/screenshots/iPhone-13-Pro-Max-428x926(1).png" alt="iPhone Screenshot" width="400" style="max-width: 45%; margin:20px  20px 20px 0;">
+    <br>
+    <br>
+  <img src="./public/screenshots/iPhone-13-Pro-Max-428x926(2).png" alt="iPhone Screenshot" width="400" style="max-width: 45%; margin:20px  20px 20px 0;">
+    <br>
+    <br>
+  <img src="./public/screenshots/iPad-Pro-11-581x832.png" alt="iPad Screenshot" width="500" style="max-width: 45%; margin:20px  20px 20px 0;">
+    <br>
+    <br>
+  <img src="./public/screenshots/Galaxy-A50-372x800.png" alt="A50 Screenshot" width="350" style="max-width: 45%; margin:20px  20px 20px 0;">
+    <br>
+    <br>
+</p>
+
+
+
+
