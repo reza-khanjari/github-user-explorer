@@ -122,9 +122,6 @@ Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
   <img src="./public/screenshots/iPhone-13-Pro-Max-428x926(2).png" alt="iPhone Screenshot" width="400" style="max-width: 45%; margin:20px  20px 20px 0;">
     <br>
     <br>
-  <img src="./public/screenshots/iPad-Pro-11-581x832.png" alt="iPad Screenshot" width="500" style="max-width: 45%; margin:20px  20px 20px 0;">
-    <br>
-    <br>
   <img src="./public/screenshots/Galaxy-A50-372x800.png" alt="A50 Screenshot" width="350" style="max-width: 45%; margin:20px  20px 20px 0;">
     <br>
     <br>
