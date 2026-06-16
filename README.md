@@ -104,7 +104,7 @@ Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
   <img src="./public/screenshots/Macbook-Pro-16-1728x1862.png" alt="Desktop Screenshot 1" width="800" style="max-width: 100%; margin: 10px 0;">
     <br>
     <br>
-  <img src="./public/screenshots/Macbook-Pro-16-1728x1862.png" alt="Desktop Screenshot " width="800" style="max-width: 100%; margin: 10px 0;">
+  <img src="./public/screenshots/Macbook-Pro-16-1728x1117.png" alt="Desktop Screenshot " width="800" style="max-width: 100%; margin: 10px 0;">
     <br>
     <br>
   <img src="./public/screenshots/Full-HD-1920x1878.png" alt="Desktop Screenshot " width="800" style="max-width: 100%; margin: 10px 0;">
